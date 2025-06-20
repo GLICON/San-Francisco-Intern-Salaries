@@ -48,11 +48,26 @@ In the initial data preparation phase, we performed the following tasks:
 <img width="366" alt="Screenshot 2025-06-18 at 04 47 58" src="https://github.com/user-attachments/assets/76aed1ea-7853-414e-bcd5-dfe381263f2d" />
 
 
+### Data Extraction and Querying
+1. Table Creation and Data Loading (csv file import)
+   
+<img width="366" alt="Screenshot 2025-06-18 at 04 47 58" src="https://github.com/user-attachments/assets/5397a439-66bd-4f60-911f-e125828ef3e6" />
 
-### Tableau Data Preparation
+2. Upper case strings
+The Job_tile and Employee_name were set to upper case using SQL
 
+<img width="452" alt="Screenshot 2025-06-20 at 10 18 34" src="https://github.com/user-attachments/assets/4201fbd8-4916-42f0-9a98-a25095feda12" />
+
+
+3. Data Extraction using pgSQL
+
+<img width="274" alt="Screenshot 2025-06-19 at 21 59 55" src="https://github.com/user-attachments/assets/e21a1b3d-9ae8-4ae4-9caa-1f405da75428" />
+
+4. 
 
 ### Exploratory Data Analysis
+
+
 
 
 
