@@ -85,22 +85,13 @@ What is the average Total Pay (excluding benefits) by Job Title for administrati
 ![Personnel and Administrative analysts](https://github.com/user-attachments/assets/ed89e244-70af-475c-ba68-7641fee3167b)
 
 
-
-
-
-
-
-
-
-
-
-
-
 ### Recommendations
 
 
+### Limitations
 
 
+### References
 
 
 
