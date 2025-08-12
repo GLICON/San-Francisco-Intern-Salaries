@@ -42,7 +42,7 @@ In the initial data preparation phase, we performed the following tasks:
 
 1. Handled missiong values or inconsistent values: 'Not provided' was replaced with 'NULL' using Excel
 2. Rows that had all null cells were deleted
-3. Dataset were inspected fro missing or inconsistent values, particularly in Base Pay, Overtime Pay and Benefits columns which had null or zero entries
+3. Dataset were inspected for missing or inconsistent values, particularly in Base Pay, Overtime Pay and Benefits columns which had null or zero entries
 4. Ensured numerical columns (e.g., TotalPay, TotalPayBenefits) were float for accurate computations
 5. All columns were checked to ensure that only the ones with contents were kept (especially the notes column)
 
