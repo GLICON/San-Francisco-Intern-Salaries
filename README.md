@@ -18,11 +18,11 @@ This project analyses extracted data of salaries of San Francisco administrative
 
 ### Project Overview
 
-This projects analyses the employee data for San Francisco city of specifed analysts from 2011 to 2014. The aim of this project is to explore administrative analyst and pesonnel analysts salaries from 2011 to 2014 
+This projects analyses the employee data for San Francisco city of specifed analysts from 2011 to 2014. The aim of this project is to explore administrative and pesonnel analysts salaries from 2011 to 2014 
 
 ### Data Sources
 
-Sales Data: The primary dataset used for this analysis is the "Salaries.csv" file, containing detailed information about employee compensation details fro SF city employess from 2011 to 2014. Full-time (FT) and part-time (PT) workers in a variety of occupations are represented in the dataset's 148,654 records. Reliability is ensured by the data's source, San Francisco's government transparency programs.
+Sales Data: The primary dataset used for this analysis is the "Salaries.csv" file, containing detailed information about employee compensation details fro SF city employess from 2011 to 2014. Full-time (FT) and part-time (PT) workers in a variety of occupations are represented in the dataset's 148,654 records. Reliability is ensured by the data's source, SF's government transparency programs.
 
 
 ### Questions
@@ -90,7 +90,7 @@ The result of the SQL query done from data agrregation is shown below and in the
 These steps will stabilize compensation, prevent future dips and support fair competitive pay structure
 
 - SF needs to investigate pay flunctuation as factors like changes in workforce composition or economic conditions may come to play.
-- Budgeting for overtime controls or incentives to optimize costs, especially if overtime is a significant driver for either or both roles
+- Budgeting for overtime controls or incentives to optimize costs, especially if overtime is a significant driver for either or both roles.
 - Targeted Acquisition Strategies: With pay increasing to around $78,000 by 2014 for both roles, benchmark against current market rates to attract qualified analysts. Also, consider targeted recruitment for underrepresented groups or skill development programs to build internal pipelines.
 
 ### Limitations
