@@ -68,7 +68,7 @@ i. Data Aggregation using SQL
 <img width="651" alt="Screenshot 2025-06-24 at 10 07 00" src="https://github.com/user-attachments/assets/75fb9c79-f065-4aaa-a023-2fb34d25d5ee" />
 
 ii. Data Aggregation using Python 
-- Alternatively, python using panda library is used to aggregate the cleaned dataset 'cleaned_salaries.csv'.
+- Alternatively, python using panda library is used to aggregate the cleaned dataset 'cleaned_salaries.csv'. The python file is saved as 'SFinterns.py'.
 
 <img width="643" alt="Screenshot 2025-06-24 at 10 49 43" src="https://github.com/user-attachments/assets/ecbef707-c610-4e9e-b727-a0665620a94a" />
 
