@@ -18,7 +18,7 @@ This project analyses extracted data of salaries of San Francisco administrative
 
 ### Project Overview
 
-This projects analyses the employee data for San Francisco city of specifed analysts from 2011 to 2014. The aim of this project is to explore administrative and pesonnel analysts salaries from 2011 to 2014.
+This projects analyses the employee data for San Francisco city of specifed analysts from 2011 to 2014. The aim of this project is to explore administrative and pesonnel analysts salaries from 2011 to 2014
 
 ### Data Sources
 
