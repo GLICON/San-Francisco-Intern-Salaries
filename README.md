@@ -39,7 +39,7 @@ Sales Data: The primary dataset used for this analysis is the "Salaries.csv" fil
 
 In the initial data preparation phase, we performed the following tasks:
 
-1. Handled missiong values or inconsistent values: 'Not provided' was replaced with 'NULL' using Excel
+1. Handled missing values or inconsistent values: 'Not provided' was replaced with 'NULL' using Excel
 2. Rows that had all null cells were deleted
 3. Dataset were inspected for missing or inconsistent values, particularly in Base Pay, Overtime Pay and Benefits columns which had null or zero entries
 4. Ensured numerical columns (e.g., TotalPay, TotalPayBenefits) were float for accurate computations
