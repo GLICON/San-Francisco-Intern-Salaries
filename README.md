@@ -48,14 +48,48 @@ In the initial data preparation phase, we performed the following tasks:
 
 ### Data Extraction and Querying
 1. Table Creation and Data Loading (csv file import)
-   
-<img width="424" alt="Screenshot 2025-06-23 at 11 58 12" src="https://github.com/user-attachments/assets/7c264b5f-b98f-407a-a6bd-1d17a352a472" />
-
+```sql
+CREATE TABLE salaries (
+          id INTEGER PRIMARY KEY,
+          Employee_name VARCHAR (39),
+          Job_ title VARCHAR (50),
+          Base_Pay FLOAT,
+          Overtime_Pay FLOAT,
+          Other_Pay FLOAT,
+          Benefits FLOAT,
+          Total_Pay FLOAT,
+          Total_Pay_Benefits FLOAT,
+          Year INTEGER,
+          Notes VARCHAR NULL,
+          Agency VARCHAR (13),
+          Status VARCHAR (3)
+);
+```
 2. Handling missing data and sorting
 
-<img width="565" alt="Screenshot 2025-06-23 at 12 44 08" src="https://github.com/user-attachments/assets/6280b96c-d4b4-4812-80a1-50e87f847b64" />
+```sql
+UPDATE salaries
+SET Base_Pay = COALESCE (Base_Pay, 0),
+          Other_Pay = COALESCE (Other_Pay, 0),
+          Benefits = COALESCE (Benefits, 0),
+          Total_Pay = COALESCE (Total_Pay, 0),
+          Total_Pay_Benefits = COALESCE (Total_Pay_Benefits, 0) ;
+DELETE FROM salaries
+WHERE Total_Pay ‹ 0 OR Employee_name IS NULL OR Job_ title IS NULL;
+```
+```sql
+--Step 1: Set the job title and employee name to uppercase
+UPDATE salaries AS cleaned_salaries
+SET job_title = UPPER(job_title), employee_name = UPPER (employee_name) ;
 
-<img width="654" alt="Screenshot 2025-06-23 at 15 15 59" src="https://github.com/user-attachments/assets/1aec4ffe-88a1-4286-902c-ac9ce3aaafc7" />
+--Step 2: Sort the column in ascending with respect to the job_title
+SELECT * FROM salaries
+ORDER BY job_title ASC;
+
+--Step 3: Delete the notes column
+ALTER TABLE salaries
+DROP notes;
+```
 
 3. Data extraction
 - The cleaned csv dataset file is saved as a new file titled "cleaned_salaries.csv"
@@ -64,8 +98,21 @@ In the initial data preparation phase, we performed the following tasks:
 
 i. Data Aggregation using SQL
 - This query allows aggregation of the Total Pay for the administrative and personnel analysts only and year showing how average pay changes over time for different roles.
-
-<img width="651" alt="Screenshot 2025-06-24 at 10 07 00" src="https://github.com/user-attachments/assets/75fb9c79-f065-4aaa-a023-2fb34d25d5ee" />
+```sql
+SELECT job_title,
+year,
+AVG (total_pay) As mean_total_pay
+FROM salaries
+WHERE agency = 'San Francisco'
+          AND (status = 'FT' OR status IS NULL)
+          AND total_pay > 0
+          AND year IN (2011, 2012, 2013, 2014)
+          AND job_title IN ('PERSONNEL ANALYST', 'ADMINISTRATIVE ANALYST')
+GROUP BY job_title,
+year
+ORDER BY job_title,
+          year;
+```
 
 ii. Data Aggregation using Python 
 - Alternatively, python using panda library is used to aggregate the cleaned dataset 'cleaned_salaries.csv'. The python file is saved as 'SFinterns.py'.
